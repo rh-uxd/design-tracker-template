@@ -1,0 +1,11 @@
+/* add files for git to ignore */
+
+node_modules
+.idea
+.sass-cache
+npm-debug.log
+_site
+.DS_Store
+js
+_sass/vendor
+assets/fonts

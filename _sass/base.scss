@@ -16,19 +16,6 @@ body { font-size: $fa-font-size-base; }
     text-decoration: none;
   }
 }
-.green { background-color: $color-pf-green-200; }
-.blue { background-color: $color-pf-blue-200; }
-.light-blue { background-color: $color-pf-blue-100; }
-.light-blue-text { color: $color-pf-black !important; }
-.orange { background-color: $color-pf-orange-200; }
-.purple {
-  background-color: $color-pf-purple-200;
-  color: $color-pf-white;
-}
-.red {
-  background-color: $color-pf-red-100;
-  color: $color-pf-white;
-}
 .filter-control {
   list-style: none;
   padding: 0 5px;

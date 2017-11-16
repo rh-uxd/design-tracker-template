@@ -3,18 +3,11 @@
 ---
 @charset "utf-8";
 
-// PatternFly import
-//@import "patternfly/patternfly";
-
-// Variables to modify font folders
-// $icon-font-path:      "../fonts/bootstrap";
-// $fa-font-path:        "../fonts/font-awesome";
-
 // Imports
 @import "../_sass/vendor/patternfly/_patternfly";
-// @import "_bootstrap";
 @import "../_sass/vendor/patternfly/font-awesome";
 
 // Site styles
 @import "base";
+@import "table-colors";
 @import "design-links";

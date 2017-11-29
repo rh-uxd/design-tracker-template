@@ -11,7 +11,7 @@
     "refresh": "gulp cleanVendors && gulp",
     "bundle": "bundle update",
     "reinstall": "rimraf node_modules && npm install && gulp cleanVendors && gulp",
-    "initialize": "gem install bundler && npm install && gulp && jekyll build"
+    "initialize": "gem install bundler && bundle install && npm install && gulp && jekyll build"
   },
   "repository": {
     "type": "git",

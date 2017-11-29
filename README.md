@@ -22,26 +22,29 @@ View the [Wiki](https://github.com/rh-uxd/design-tracker-template/wiki)
 1. Code away!
 
 ### First Time Build
-1. Verify that you have the following installed:
+1. Verify that you have the following installed (see our [Dependencies](https://github.com/rh-uxd/design-tracker-template/wiki/Dependencies):
     - Node
     - Gulp
     - Gem
     - Jekyll
-2. run `gem install bundler`
-3. run `npm install`
-4. run `gulp`
-    - this will copy the files from your
-    npm_modules directory to their respective
-    locations for the jekyll build process
-5. run `jekyll build`
-6. run `jekyll serve`
+2. Run `npm run initialize`
+    - commands as part of the script:
+      - `gem install bundler`
+      - `bundle install`
+      - `npm install`
+      - `gulp`
+        - this will copy the files from your npm_modules directory to their respective locations for the jekyll build process
+      - `jekyll build`
+    - if this script fails, at the `jekyll build` step, run `bundle exec jekyll build`
+3. run `jekyll serve`
     - for viewing locally at http://localhost:4000
 
 ### Subsequent Builds
 1. `jekyll serve` to start your environment on port `:4000`.
 
 ### Troubleshooting
-If you are having issues with the site building, you can run a set of cleaning commands to reset your environment.
+- If you are having issues with the site building, you can run a set of cleaning commands to reset your environment.
+- If you have issues with the ***gem bundler***, try to update your bundles with `bundle update`.
 
 #### Environment Troubles
 - `npm run reinstall`

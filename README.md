@@ -52,8 +52,3 @@ View the [Wiki](https://github.com/rh-uxd/design-tracker-template/wiki)
 - `gulp cleanVendors`
     - This will remove just the vendor files that were copied over during the `gulp` process.
     - Run `gulp` to copy a clean set of vendor files back to your directories.
-
-#### Gem Issues
-If you have issues with your gem bundles, you can run the following command:
-- `bundle update`
-    - This will check for any updates to your gem bundles, cleaning old bundles.

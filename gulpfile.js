@@ -9,23 +9,23 @@ gulp.task('clean', function() {
 
 // Copy libraries from /node_modules to their respective locations
 gulp.task('copyJS', function() {
-    gulp.src(['node_modules/bootstrap-sass/assets/javascripts/*.min.js', 'node_modules/jquery/dist/jquery.min.js', 'node_modules/jquery/dist/jquery.min.map', 'node_modules/patternfly-sass/assets/javascripts/**'])
+    gulp.src(['node_modules/bootstrap-sass/assets/javascripts/*.min.js', 'node_modules/jquery/dist/jquery.min.js', 'node_modules/jquery/dist/jquery.min.map', 'node_modules/patternfly/dist/js/**'])
         .pipe(gulp.dest('js/vendor/'))
 });
 
 gulp.task('copySASS', function() {
-    gulp.src(['node_modules/patternfly-sass/assets/stylesheets/**'])
-        .pipe(gulp.dest('_sass/vendor/patternfly/'))
+    gulp.src(['node_modules/patternfly/dist/sass/**'])
+        .pipe(gulp.dest('_sass/vendor/'))
     gulp.src(['node_modules/bootstrap-sass/assets/stylesheets/bootstrap/**'])
-        .pipe(gulp.dest('_sass/vendor/patternfly/bootstrap/'))
+        .pipe(gulp.dest('_sass/vendor/bootstrap/'))
     gulp.src(['node_modules/font-awesome/scss/**'])
-        .pipe(gulp.dest('_sass/vendor/patternfly/'))
+        .pipe(gulp.dest('_sass/vendor/'))
 });
 
 gulp.task('copyFonts', function() {
     gulp.src(['node_modules/bootstrap-sass/assets/fonts/**'])
         .pipe(gulp.dest('fonts'))
-    gulp.src(['node_modules/patternfly-sass/assets/fonts/patternfly/**'])
+    gulp.src(['node_modules/patternfly/dist/fonts/**'])
         .pipe(gulp.dest('fonts/patternfly'))
     gulp.src(['node_modules/font-awesome/fonts/**'])
         .pipe(gulp.dest('fonts/'))

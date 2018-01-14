@@ -1,5 +1,5 @@
-@import "vendor/patternfly/font-awesome";
-@import "vendor/patternfly/variables.scss";
+@import "vendor/font-awesome.scss";
+@import "vendor/patternfly/_variables.scss";
 
 body { font-size: $fa-font-size-base; }
 .full-width { width: 100%; }

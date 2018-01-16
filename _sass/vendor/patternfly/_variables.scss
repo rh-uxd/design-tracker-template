@@ -50,7 +50,7 @@ $dropdown-link-hover-border-color:                                  $color-pf-bl
 $dropdown-link-focus-color:                                         $color-pf-white !default;
 $flyout-transition-pf:                                              all 200ms cubic-bezier(.35, 0, .25, 1) !default;
 $font-family-monospace:                                             Menlo, Monaco, Consolas, monospace !default;
-$font-path:                                                         if($pf-sass-asset-helper, "", "../fonts/") !default;
+$font-path:                                                         if($pf-sass-asset-helper, "", "../fonts/patternfly/") !default;
 $footer-pf-bg-color:                                                $color-pf-black !default;
 $footer-pf-padding-left:                                            25px !default;
 $footer-pf-padding-top:                                             10px !default;

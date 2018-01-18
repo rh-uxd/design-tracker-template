@@ -24,18 +24,18 @@ gulp.task('copySASS', function() {
 
 gulp.task('copyFonts', function() {
     gulp.src(['node_modules/bootstrap-sass/assets/fonts/**'])
-        .pipe(gulp.dest('fonts'))
+        .pipe(gulp.dest('assets/fonts/'))
     gulp.src(['node_modules/patternfly/dist/fonts/**'])
-        .pipe(gulp.dest('fonts/patternfly'))
+        .pipe(gulp.dest('assets/fonts/'))
     gulp.src(['node_modules/font-awesome/fonts/**'])
-        .pipe(gulp.dest('fonts/'))
+        .pipe(gulp.dest('assets/fonts/'))
 });
 
 gulp.task('cleanVendors', function() {
     return del([
         '_sass/vendor',
         'js/vendor',
-        'fonts/**'
+        'assets/fonts/**'
     ]);
 });
 

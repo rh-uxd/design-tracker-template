@@ -8,6 +8,15 @@ View the [Changelog](CHANGELOG.md)
 
 View the [Wiki](https://github.com/rh-uxd/design-tracker-template/wiki)
 
+### ** Contents: **
+- [Installation](#installation)
+  - [First Time Build](#first-time-build)
+  - [Subsequent Builds](#subsequent-builds)
+- [Troubleshooting](#troubleshooting)
+- [Site Configuration](#site-configuration)
+  - [Navigation](#navigation)
+  - [Permalinks](#permalinks)
+
 ---
 
 ## Installation
@@ -42,7 +51,7 @@ View the [Wiki](https://github.com/rh-uxd/design-tracker-template/wiki)
 ### Subsequent Builds
 1. `jekyll serve` to start your environment on port `:4000`.
 
-### Troubleshooting
+## Troubleshooting
 - If you are having issues with the site building, you can run a set of cleaning commands to reset your environment.
 - If you have issues with the ***gem bundler***, try to update your bundles with `bundle update`.
 
@@ -52,3 +61,34 @@ View the [Wiki](https://github.com/rh-uxd/design-tracker-template/wiki)
 - `gulp cleanVendors`
     - This will remove just the vendor files that were copied over during the `gulp` process.
     - Run `gulp` to copy a clean set of vendor files back to your directories.
+
+## Site Configuration
+The Design Tracker Template utilizes [PatternFly](https://www.patternfly.org) as the basis for the UI, which is built off of Bootstrap (3.x).
+  - at this time, there are no plans to move the Design Tracker Template to use Bootstrap 4.x
+
+### Navigation
+The navigation is based off of Bootstrap's navbar, and can be found under `_includes/nav.html`. Each link is configured using Jekyll's relative path scaffolding, along with an `if page.navbar_active` check. This check will apply the `.active` class to the navigation element, if the active page name matches the checked variable.
+
+**Example:**
+
+** this will apply the `.active` class to the page if "home" is the page's title.
+``` js
+{% if page.navbar_active == "home" %} class="active"{% endif %}
+```
+
+### Icon &amp; Favicon
+- To replace the navbar icon, swap out the existing `icon.png` found under `assets/img/icon.png` with your own image.
+- To replace the favicon, swap out the existing `favicon.png` found under `assets/image/favicon.png` with your own image.
+
+### Permalinks
+The Design Tracker utilizes Jekyll's built in [Permalink](https://jekyllrb.com/docs/permalinks/) solution in order to define simple and easy-to-use links. Each link is configured in the given pages front matter, with a relative path and permalink override. These, combined with the `navbar_active` name and `layout`callout, give each page their proper information.
+
+```markdown
+---
+layout: designs
+title: Design Table Example 1
+navbar_active: example1
+relative_path: ../
+permalink: designs/example1.html
+---
+```
